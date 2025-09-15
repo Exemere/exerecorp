@@ -1,9 +1,105 @@
-import React from 'react'
+// app/portfolio/page.tsx
+"use client";
 
-const page = () => {
+import Image from "next/image";
+import Link from "next/link";
+
+type WorkItem = {
+  title: string;
+  category: string;
+  imgSrc: string;
+  link: string;
+};
+
+const works: WorkItem[] = [
+  {
+    title: "An eCommerce Platform",
+    category: "Lixer Electronics",
+    imgSrc: "/works/graphics-design.jpg",
+    link: "https://example.com/design",
+  },
+  {
+    title: "Blog platform",
+    category: "DevCore",
+    imgSrc: "/works/web-development.jpg",
+    link: "https://example.com/webdev",
+  },
+  {
+    title: "SEO Services",
+    category: "Optimisation",
+    imgSrc: "/works/app-development.jpg",
+    link: "https://example.com/appdev",
+  },
+  {
+    title: "IT Support",
+    category: "Support",
+    imgSrc: "/works/digital-marketing.jpg",
+    link: "https://example.com/marketing",
+  },
+  {
+    title: "Product Design",
+    category: "Design",
+    imgSrc: "/works/seo-services.jpg",
+    link: "https://example.com/seo",
+  },
+  {
+    title: "Product Design",
+    category: "Design",
+    imgSrc: "/works/product-design.jpg",
+    link: "https://example.com/product",
+  },
+];
+
+export default function PortfolioPage() {
   return (
-    <div>page</div>
-  )
-}
+    <section className="bg-[#0f172a] text-white py-20 px-6 sm:px-12 lg:px-20">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-blue-500">Portfolio</h2>
+        <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+          We’ve worked on a variety of projects across different domains. Here are some of our
+          recent works showcasing our capabilities and creativity.
+        </p>
+      </div>
 
-export default page
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {works.map((work, idx) => (
+          <div
+            key={idx}
+            className="group relative overflow-hidden rounded-lg shadow-lg"
+          >
+            {/* Image */}
+            <div className="w-full h-[150px] sm:h-[1900px] lg:h-[230px] relative">
+              <Image
+                src={work.imgSrc}
+                alt={work.title}
+                fill
+                className="object-cover rounded-lg transform group-hover:scale-105 transition duration-500"
+              />
+
+              {/* Overlay with Button */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                <Link
+                  href={work.link}
+                  target="_blank"
+                  className="px-5 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition"
+                >
+                  Live Preview
+                </Link>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="p-6">
+              <span className="text-sm text-blue-500">{work.category}</span>
+              <h3 className="text-xl font-semibold text-white mt-2">
+                {work.title}
+              </h3>
+              <p className="text-gray-400 mt-2 text-sm">
+               </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

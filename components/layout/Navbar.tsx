@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-transparent text-white shadow-md fixed top-0 left-0 z-50">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      <div className="container mx-auto flex items-center justify-between px-6 pb-2 pt-2">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -34,12 +34,16 @@ export default function Navbar() {
         <div className="flex gap-6">
           {links.map((link) => {
             const isActive = pathname === link.href;
+            const isContact = link.label === "Contact";
+
             return (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`relative pb-1 transition ${
-                  isActive
+                  isContact
+                    ? `border-2 border-sky-500 bg-sky-500/20 text-white px-4 py-1 rounded-md hover:bg-sky-500/30`
+                    : isActive
                     ? "text-sky-500 font-semibold underline underline-offset-4"
                     : "hover:underline underline-offset-4 hover:text-slate-200"
                 }`}
