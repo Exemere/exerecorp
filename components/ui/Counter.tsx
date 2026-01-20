@@ -11,7 +11,7 @@ export default function Counter({ value, label }: CounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
+    const start = 0;
     const duration = 2000; // 2 seconds
     const startTime = performance.now();
 

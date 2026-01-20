@@ -35,10 +35,10 @@ export default function Home() {
             Embrace a world where innovation meets precision.
           </h1>
           <p className="text-lg text-white drop-shadow-lg leading-relaxed">
-            At Exere Corp, we don't just build software, we orchestrate
+            At Exere Corp, we don&apos;t just build software, we orchestrate
             symphonies of code, weaving intricate solutions that resonate with
             brilliance. Every line of code is an ode to digital magnificence.
-            Let's embark on a journey of innovation together.
+            Let&apos;s embark on a journey of innovation together.
           </p>
 
           {/* Buttons + Social Icons */}

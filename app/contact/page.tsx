@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, Linkedin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Twitter } from "lucide-react";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
