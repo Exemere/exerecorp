@@ -14,21 +14,21 @@ type WorkItem = {
 const works: WorkItem[] = [
   {
     title: "An eCommerce Platform",
-    category: "Lixer Electronics",
-    imgSrc: "/works/graphics-design.jpg",
-    link: "https://example.com/design",
+    category: "Ecommerce ",
+    imgSrc: "public/delux.png",
+    link: "https://delux.rf.gd",
   },
   {
-    title: "Blog platform",
-    category: "DevCore",
-    imgSrc: "/works/web-development.jpg",
-    link: "https://example.com/webdev",
+    title: "Loan platform",
+    category: "Fintech",
+    imgSrc: "public/loan.png",
+    link: "https://exerecorp.rf.gd/",
   },
   {
-    title: "SEO Services",
-    category: "Optimisation",
-    imgSrc: "/works/app-development.jpg",
-    link: "https://example.com/appdev",
+    title: "Travel Booking platform",
+    category: "Booking",
+    imgSrc: "public/travel.png",
+    link: "https://luxair.rf.gd/",
   },
   {
     title: "IT Support",
@@ -37,8 +37,8 @@ const works: WorkItem[] = [
     link: "https://example.com/marketing",
   },
   {
-    title: "Product Design",
-    category: "Design",
+    title: "Cloud Engineering",
+    category: "Cloud",
     imgSrc: "/works/seo-services.jpg",
     link: "https://example.com/seo",
   },
