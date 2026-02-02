@@ -15,37 +15,37 @@ const works: WorkItem[] = [
   {
     title: "An eCommerce Platform",
     category: "Ecommerce ",
-    imgSrc: "public/delux.png",
+    imgSrc: "/delux.png",
     link: "https://delux.rf.gd",
   },
   {
     title: "Loan platform",
     category: "Fintech",
-    imgSrc: "public/loan.png",
+    imgSrc: "/loan.png",
     link: "https://exerecorp.rf.gd/",
   },
   {
     title: "Travel Booking platform",
     category: "Booking",
-    imgSrc: "public/travel.png",
+    imgSrc: "/travel.png",
     link: "https://luxair.rf.gd/",
   },
   {
     title: "IT Support",
     category: "Support",
-    imgSrc: "/works/digital-marketing.jpg",
+    imgSrc: "/support.png",
     link: "https://example.com/marketing",
   },
   {
     title: "Cloud Engineering",
     category: "Cloud",
-    imgSrc: "/works/seo-services.jpg",
+    imgSrc: "/cloud.jpg",
     link: "https://example.com/seo",
   },
   {
     title: "Product Design",
     category: "Design",
-    imgSrc: "/works/product-design.jpg",
+    imgSrc: "/product.jpg",
     link: "https://example.com/product",
   },
 ];
